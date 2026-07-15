@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Landing Page Template</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fc;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .site-header {
+            background-color: #ffffff;
+            border-bottom: 1px solid #e6e8f0;
+        }
+
+        .site-header__inner,
+        .about-hero__content,
+        .team-section__inner,
+        .site-footer__inner {
+            width: min(100%, 1200px);
+            margin: 0 auto;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .site-header__inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            gap: 1rem;
+        }
+
+        .site-header__brand {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #2f365f;
+        }
+
+        .site-header__nav-list {
+            display: flex;
+            list-style: none;
+            gap: 1.25rem;
+            flex-wrap: wrap;
+        }
+
+        .site-header__nav-link {
+            color: #4b567a;
+            font-weight: 500;
+        }
+
+        .site-header__nav-link--active {
+            color: #667eea;
+        }
+
+        .about-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #ffffff;
+        }
+
+        .about-hero__content {
+            padding-top: 96px;
+            padding-bottom: 96px;
+            text-align: center;
+        }
+
+        .about-hero__eyebrow {
+            display: inline-block;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        .about-hero__title {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            line-height: 1.1;
+            margin-bottom: 1rem;
+        }
+
+        .about-hero__text {
+            max-width: 720px;
+            margin: 0 auto;
+            font-size: 1.15rem;
+            color: rgba(255, 255, 255, 0.92);
+        }
+
+        .team-section {
+            padding-top: 4.5rem;
+            padding-bottom: 4.5rem;
+        }
+
+        .team-section__header {
+            max-width: 680px;
+            margin: 0 auto 2.5rem;
+            text-align: center;
+        }
+
+        .team-section__title {
+            font-size: 2.25rem;
+            margin-bottom: 0.75rem;
+            color: #2f365f;
+        }
+
+        .team-section__description {
+            color: #5f6787;
+            font-size: 1.05rem;
+        }
+
+        .team-section__grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .team-card {
+            background-color: #ffffff;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(36, 45, 82, 0.08);
+        }
+
+        .team-card__avatar {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            margin-bottom: 1.25rem;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #667eea;
+            background: rgba(102, 126, 234, 0.12);
+        }
+
+        .team-card__name {
+            font-size: 1.25rem;
+            margin-bottom: 0.35rem;
+            color: #2f365f;
+        }
+
+        .team-card__role {
+            display: inline-block;
+            margin-bottom: 0.85rem;
+            font-weight: 600;
+            color: #667eea;
+        }
+
+        .team-card__bio {
+            color: #5f6787;
+        }
+
+        .site-footer {
+            background-color: #f1f3f8;
+            border-top: 1px solid #e6e8f0;
+        }
+
+        .site-footer__inner {
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+            text-align: center;
+            color: #666;
+        }
+
+        @media (max-width: 640px) {
+            .site-header__inner {
+                flex-direction: column;
+            }
+
+            .site-header__nav-list {
+                justify-content: center;
+            }
+
+            .about-hero__content {
+                padding-top: 72px;
+                padding-bottom: 72px;
+            }
+
+            .team-section {
+                padding-top: 3.5rem;
+                padding-bottom: 3.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a class="site-header__brand" href="index.html">Landing Page Template</a>
+            <nav aria-label="Primary navigation">
+                <ul class="site-header__nav-list">
+                    <li><a class="site-header__nav-link" href="index.html">Home</a></li>
+                    <li><a class="site-header__nav-link site-header__nav-link--active" href="about.html" aria-current="page">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="about-hero">
+            <div class="about-hero__content">
+                <p class="about-hero__eyebrow">Our Mission</p>
+                <h1 class="about-hero__title">Building products that help modern teams move with clarity.</h1>
+                <p class="about-hero__text">
+                    We create thoughtful digital experiences that remove friction, strengthen collaboration,
+                    and give growing businesses the confidence to scale with purpose.
+                </p>
+            </div>
+        </section>
+
+        <section class="team-section" aria-labelledby="team-title">
+            <div class="team-section__inner">
+                <div class="team-section__header">
+                    <h2 class="team-section__title" id="team-title">Meet the Team</h2>
+                    <p class="team-section__description">
+                        A small, focused group combining product thinking, design craft, and engineering rigor.
+                    </p>
+                </div>
+
+                <div class="team-section__grid">
+                    <article class="team-card">
+                        <div class="team-card__avatar" aria-hidden="true">AL</div>
+                        <h3 class="team-card__name">Ava Lee</h3>
+                        <p class="team-card__role">Founder &amp; CEO</p>
+                        <p class="team-card__bio">
+                            Ava leads the company vision and works closely with customers to shape solutions that solve real business problems.
+                        </p>
+                    </article>
+
+                    <article class="team-card">
+                        <div class="team-card__avatar" aria-hidden="true">MR</div>
+                        <h3 class="team-card__name">Mateo Rivera</h3>
+                        <p class="team-card__role">Head of Product Design</p>
+                        <p class="team-card__bio">
+                            Mateo turns complex workflows into intuitive experiences, ensuring every interaction feels clear, useful, and human.
+                        </p>
+                    </article>
+
+                    <article class="team-card">
+                        <div class="team-card__avatar" aria-hidden="true">SK</div>
+                        <h3 class="team-card__name">Sofia Kim</h3>
+                        <p class="team-card__role">Lead Engineer</p>
+                        <p class="team-card__bio">
+                            Sofia builds resilient front-end systems that stay fast, accessible, and maintainable as the product grows.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="site-footer__inner">
+            <p>&copy; 2024 Landing Page Template. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://poc.kesef.cloud/analytics.js"></script>
+</body>
+</html>
